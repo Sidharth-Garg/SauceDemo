@@ -23,7 +23,7 @@ export class readExcelFile{
  
     public async getProductName(){
         const workBook=new Exceljs.Workbook();
-        await workBook.xlsx.readFile('tests/data/datasheet2.xlsx');
+        await workBook.xlsx.readFile('tests/Data/datasheet2.xlsx');
         const worksheet=workBook.getWorksheet('ProductName');
         if (!worksheet) {
             throw new Error('Worksheet "Sheet2" not found');
@@ -45,7 +45,7 @@ export class readExcelFile{
     }
     public async getUserDetails(){
         const workBook=new Exceljs.Workbook();
-        await workBook.xlsx.readFile('tests/data/datasheet2.xlsx');
+        await workBook.xlsx.readFile('tests/Data/datasheet2.xlsx');
         const worksheet=workBook.getWorksheet('UserDetails');
         if (!worksheet) {
             throw new Error('Worksheet "Sheet3" not found');
