@@ -1,0 +1,51 @@
+{
+  "name": "saucedemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "project": "npx playwright test --headed",
+    "report": "npx playwright show-report",
+    "test": "mocha -r ts-node/register tests/**/*.spec.ts",
+    "coverage": "nyc npm run test",
+    "nyc_report": "npx nyc --reporter=lcov --reporter=text-lcov playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@playwright/test": "^1.41.2",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.20",
+    "allure-commandline": "^2.27.0",
+    "allure-playwright": "^2.13.0",
+    "mocha": "^10.3.0",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.3",
+    "exceljs": "^4.4.0",
+    "winston": "^3.11.0"
+  },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "check-coverage": true,
+    "all": true,
+    "include": [
+      "tests/TestSuite/*.spec.ts"
+    ],
+    "exclude": [
+      "src/_tests_/**/*.*"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "text",
+      "text-summary"
+    ],
+    "report-dir": "coverage"
+  }
+}

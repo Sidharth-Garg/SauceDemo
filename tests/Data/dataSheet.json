@@ -1,0 +1,20 @@
+{
+    "baseurl" : "https://www.saucedemo.com/v1/",
+    "username" : "standard_user",
+    "password" : "secret_sauce",
+    "homepageurl" : "https://www.saucedemo.com/v1/inventory.html",
+    "listoption" : "Logout",
+    "sorttype" : "za",
+    "itemname1" : "Sauce Labs Onesie",
+    "itemprice1" : "$15.99",
+    "itemname2" : "Sauce Labs Bolt T-Shirt",
+    "itemprice2" : "$7.99",
+    "carttext" : "Your Cart",
+    "checkoutinfotext" : "Checkout: Your Information",
+    "first": "Miss",
+    "last": "Maggie",
+    "postal": "560100",
+    "checkoutoverviewtext": "Checkout: Overview",
+    "finishtext" : "Finish",
+    "placedordertext" : "THANK YOU FOR YOUR ORDER"
+}
